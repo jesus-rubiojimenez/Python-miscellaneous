@@ -20,9 +20,9 @@ kB = 1
 kappa = 1
 Treal = 1
 
-# Hypothesis space
-thetamin = 10**3
-thetamax = 10**4
+# Hypothesis space (change accordingly)
+thetamin = 0.1
+thetamax = 10
 theta = np.linspace(thetamin,thetamax,10**4)
 nmean = nu**2 * kappa / (np.exp(h * nu / (kB*theta)) - 1)
 
