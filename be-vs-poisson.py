@@ -11,21 +11,17 @@ import numpy as np
 from scipy import special
 import matplotlib.pyplot as plt
 
-from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
-# rc('text', usetex=True)
-
 # Parameters
-nu=1
-h=1
-kappa=10
-beta=1
+nu = 1
+h = 1
+kappa = 10
+beta = 1
 
 # Mean number
-n_mean=nu**2 * kappa / (np.exp(beta * h * nu) - 1)
+n_mean = nu**2 * kappa / (np.exp(beta * h * nu) - 1)
 
 # Outcomes
-n_outcomes=np.array([i for i in range(20)])
+n_outcomes = np.array([i for i in range(20)])
 
 # Bose-Einstein distribution
 bose_dist = np.exp(n_outcomes*np.log(n_mean / (1 + n_mean)) - np.log(1 + n_mean))
