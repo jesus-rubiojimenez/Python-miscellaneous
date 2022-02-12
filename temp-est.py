@@ -44,7 +44,6 @@ for runs in range(1, mu + 1):
     
     # Optimal uncertainty
     np.put(optErr, runs-1, np.trapz(aux * np.log(theta), x = theta) - optLogEst**2, mode='raise')
-       
 
 optErrBar = optEst * np.sqrt(optErr)
 mu_range = np.array(range(1, mu + 1))
