@@ -33,7 +33,7 @@ ax.set_xlim([np.max( [np.min(mu_fit),np.min(mu_bayes)] ), np.min( [np.max(mu_fit
 plt.legend()
 plt.grid(True, which="both")
 
-# Speed convergence
+# Convergence speed
 slope_fit = np.diff( np.log(err_fit) ) / np.diff( np.log(mu_fit) )
 mu_slope_fit = np.delete(mu_fit, 0)
 threshold_err_fit = np.abs( slope_fit + 1 ) # mathematically: |[slope - (-1)]/(-1)|
