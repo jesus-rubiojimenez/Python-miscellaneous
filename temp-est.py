@@ -27,7 +27,7 @@ theta = np.linspace(thetamin,thetamax,10**4)
 nmean = nu**2 * kappa / (np.exp(h * nu / (kB*theta)) - 1)
 
 # Inference
-prob_temp = 1 / (np.trapz(1 / theta, x = theta) * theta) # prior
+prob_temp = 1 / (np.trapz(1 / theta, x = theta) * theta) # prior probability
 optEst = np.zeros(mu)
 optErr = np.zeros(mu)
 for runs in range(1, mu + 1):
