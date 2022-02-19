@@ -12,7 +12,7 @@ from scipy import special
 import matplotlib.pyplot as plt
 
 # Data (change accordingly)
-data = np.loadtxt("dummy_data.txt", dtype=float)
+data = np.loadtxt("dummy_data.txt", dtype = float)
 mu = np.size(data)
 h = 1
 nu = 1
@@ -41,7 +41,7 @@ for runs in range(1, mu + 1):
     # Optimal estimator
     aux = prob_temp * np.log(theta)
     optLogEst = np.trapz(aux, x = theta)
-    np.put(optEst, runs-1, np.exp(optLogEst), mode='raise')
+    np.put(optEst, runs-1, np.exp(optLogEst), mode = 'raise')
     
     # Optimal uncertainty
     np.put(optErr, runs-1, np.trapz(aux * np.log(theta), x = theta) - optLogEst**2, mode = 'raise')
